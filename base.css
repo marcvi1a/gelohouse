@@ -28,6 +28,10 @@ a {
   color: #fff;
 }
 
+#acuity-footer {
+  display: none;
+}
+
 .strikethrough {
   text-decoration: line-through;
 }
