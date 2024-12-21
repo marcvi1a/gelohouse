@@ -20,19 +20,13 @@ h1 {
   height: 1rem;
 }
 
+p {
+  height: 0rem;
+}
+
 a {
   color: #378DE2;
   text-decoration: none;
-}
-
-ul li:first-child,
-ol li:first-child {
-  margin-top: -1rem;
-}
-
-ul li:not(:last-child),
-ol li:not(:last-child) {
-  margin-bottom: 1rem;
 }
 
 .strikethrough {
