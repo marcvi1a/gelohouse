@@ -32,6 +32,10 @@ a {
   margin-top: 2rem;
 }
 
+.scheduler {
+  max-width: 890px;
+}
+
 .footer {
   color: #ccc;
   font-size: 0.8rem;
