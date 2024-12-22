@@ -27,6 +27,12 @@
 
     <script>
         document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+        <!-- Reformat Product Price (15,000.00 -> 15000) -->
+        <!-- Author: Dmitry Kiselyov @_dmitrykiselyov -->
+        <script src="https://cdn.jsdelivr.net/npm/@ryanmorr/ready@1.4.0/dist/ready.umd.js"></script>
+        <script>!function(){function reformatPrice(price){var priceClone=price.cloneNode(!0);function reformat(){priceClone.innerHTML=price.innerHTML;var target=priceClone.querySelector(".sqs-money-native")||priceClone,textNode=priceClone.querySelector(".sqs-money-native");target.textContent.length>1?target.textContent=format(target.textContent):textNode&&(textNode.textContent=format(textNode.textContent))}function format(text){return text.replace(",","").replace(/\.\d{2}/,"")}function watch(){var observer;new MutationObserver(reformat).observe(price,{childList:!0})}priceClone.classList.add("product-price-clone"),price.parentNode.insertBefore(priceClone,price.nextElementSibling),price.style.display="none",reformat(),watch()}ready(".product-price:not(.product-price-clone),.original-price:not(.product-price-clone)",reformatPrice)}();</script>
+        <!-- end Reformat Product Price -->
     </script>
 
   </div>
