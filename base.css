@@ -21,7 +21,7 @@ h1 {
 }
 
 p {
-  height: 1rem;
+  line-height: 1rem;
 }
 
 a {
@@ -47,6 +47,6 @@ a {
 
 @media screen and (max-width: 749px) {
   .text {
-    padding-left: 1rem;
+    padding: 0 1rem;
   }
 }
