@@ -36,8 +36,13 @@ a {
   margin-top: 2rem;
 }
 
-.footer, .footer a {
+.footer {
   color: #ccc;
+}
+
+.gelo-health {
+  color: #ccc;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 749px) {
