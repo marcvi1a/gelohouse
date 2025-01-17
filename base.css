@@ -65,7 +65,7 @@ a {
   justify-content: center;
   background-color: #25d366;
   padding: 10px;
-  border-radius: 100px;
+  border-radius: 50%;
   text-decoration: none;
   z-index: 999;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
