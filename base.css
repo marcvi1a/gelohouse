@@ -36,6 +36,12 @@ a {
   margin-top: 2rem;
 }
 
+.cupom {
+  padding: 2rem;
+  border-radius: 2rem;
+  background-color: #FFFFFF80;
+}
+
 .scheduler {
   margin-top: 4rem;
   max-width: 890px;
