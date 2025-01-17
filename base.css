@@ -37,9 +37,12 @@ a {
 }
 
 .cupom {
-  padding: 2rem;
-  border-radius: 2rem;
-  background-color: #FFFFFF80;
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: #FFF;
+  color: #000;
+  max-width: 350px;
+  text-align: center;
 }
 
 .scheduler {
