@@ -101,7 +101,13 @@ footer {
     padding: 0 1rem;
   }
 
-  footer {
-    line-height: 1rem;
+  .only-desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .only-mobile {
+    display: none;
   }
 }
