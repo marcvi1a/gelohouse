@@ -100,4 +100,8 @@ footer {
   .text {
     padding: 0 1rem;
   }
+
+  footer {
+    line-height: 1rem;
+  }
 }
