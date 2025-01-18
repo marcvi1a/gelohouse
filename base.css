@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
 
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 body {
@@ -90,8 +90,8 @@ footer {
   border-top: 1px solid #ccc;
   padding: 1rem;
   color: #ccc;
-  font-size: 0.8rem;
-  line-height: 0.8rem;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
 }
 
 .gelo-health {
