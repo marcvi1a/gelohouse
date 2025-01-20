@@ -50,13 +50,13 @@ a {
 }
 
 .scheduler {
-  margin-top: 4rem;
+  margin-top: 3rem;
   max-width: 890px;
 }
 
 @media screen and (max-width: 749px) {
   .scheduler {
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 }
 
