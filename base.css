@@ -54,12 +54,6 @@ a {
   max-width: 890px;
 }
 
-@media screen and (max-width: 749px) {
-  .scheduler {
-    margin-top: 3rem;
-  }
-}
-
 #whatsapp-button {
   position: fixed;
   bottom: 20px;
