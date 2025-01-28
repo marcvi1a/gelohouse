@@ -54,15 +54,6 @@ a {
   margin-top: 2rem;
 }
 
-.cupom {
-  padding: 0.75rem 0;
-  border-radius: 4px;
-  background-color: #FFF;
-  color: #000;
-  max-width: 275px;
-  text-align: center;
-}
-
 .scheduler {
   margin-top: 3rem;
   max-width: 890px;
