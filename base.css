@@ -19,6 +19,18 @@ a {
   color: #fff;
 }
 
+.sticky-banner {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  padding: 10px;
+  z-index: 998;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
 .logo {
   font-family: 'Alegreya', serif;
   font-weight: 400;
