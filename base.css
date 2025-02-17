@@ -68,6 +68,10 @@ a {
   margin-top: 1rem;
 }
 
+.how-to__break:first-of-type {
+  margin-top: 0.5rem;
+}
+
 #scheduler {
   scroll-margin-top: 4rem;
 }
