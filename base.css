@@ -36,6 +36,9 @@ a {
   font-family: 'Alegreya', serif;
   font-weight: 400;
   margin-top: 4rem;
+}
+
+.logo > a {
   text-decoration: none;
 }
 
