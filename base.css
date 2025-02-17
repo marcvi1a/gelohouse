@@ -51,7 +51,7 @@ a {
 }
 
 .text > p {
-  line-height: 0.75;
+  line-height: 1;
 }
 
 .strikethrough {
