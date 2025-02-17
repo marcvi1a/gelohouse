@@ -65,6 +65,10 @@ a {
   margin-top: 1rem;
 }
 
+#scheduler {
+  scroll-margin-top: 0;
+}
+
 .scheduler {
   margin-top: 3rem;
   max-width: 890px;
