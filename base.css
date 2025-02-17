@@ -47,6 +47,11 @@ a {
   flex-direction: column;
   justify-content: left;
   padding: 0 2rem;
+  margin-top: 1.1rem;
+}
+
+.text > p {
+  height: 0.5rem;
 }
 
 .strikethrough {
