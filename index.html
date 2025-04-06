@@ -63,9 +63,15 @@
         el.textContent = new Date().getFullYear();
       });
 
-      document.querySelectorAll(".css-51yr7f").forEach(el => {
-        el.textContent = "Cupom";
-      });
+      const interval = setInterval(() => {
+        const elements = document.querySelectorAll(".css-51yr7f");
+        if (elements.length > 0) {
+          elements.forEach(el => {
+            el.textContent = "Cupom";
+          });
+          clearInterval(interval); // Stop checking once it's done
+        }
+      }, 200); // Check every 200ms
 
     </script>
 
