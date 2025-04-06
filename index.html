@@ -48,23 +48,20 @@
 
   <footer>
     <div class="only-desktop">
-      <p>© <span id="currentYear"></span> Gelohouse. Todos os direitos reservados. Uma experiência assinada pela <a class="gelo-health" target="_blank" href="https://www.gelohealth.com.br">Gelo Health</a>.</p>
+      <p>© <span class="currentYear"></span> Gelohouse. Todos os direitos reservados. Uma experiência assinada pela <a class="gelo-health" target="_blank" href="https://www.gelohealth.com.br">Gelo Health</a>.</p>
       <p>CNPJ: 59.888.919/0001-06. Av. Rebouças, 2581 - Pinheiros, São Paulo - SP, 05401-300</p>
     </div>
     <div class="only-mobile">
-      <p>© <span id="currentYear"></span> Gelohouse. Todos os direitos reservados.
+      <p>© <span class="currentYear"></span> Gelohouse. Todos os direitos reservados.
       <p>Uma experiência assinada pela <a class="gelo-health" target="_blank" href="https://www.gelohealth.com.br">Gelo Health</a>.</p>
       <p>CNPJ: 59.888.919/0001-06</p>
       <p>Av. Rebouças, 2581 - Pinheiros, São Paulo - SP, 05401-300</p>
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const yearEl = document.getElementById("currentYear");
-          if (yearEl) {
-            yearEl.textContent = new Date().getFullYear();
-          }
-        });
+      document.querySelectorAll(".currentYear").forEach(el => {
+        el.textContent = new Date().getFullYear();
+      });
     </script>
   </footer>
 </body>
