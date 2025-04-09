@@ -121,3 +121,8 @@ footer {
     display: none;
   }
 }
+
+
+.speech > p {
+  margin: 0;
+}
