@@ -128,10 +128,14 @@ footer {
 
 /* this is /speech.html */
 
+.subtitle {
+  font-size: 1.7rem;
+}
+
 .speech > p {
   margin-bottom: 0;
 }
 
-.subtitle {
-  font-size: 1.7rem;
+.speech {
+  margin-bottom: 4rem;
 }
