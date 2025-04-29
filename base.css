@@ -126,16 +126,16 @@ footer a {
 }
 
 
-/* this is /speech.html */
+/* this is /papo.html */
 
 .subtitle {
   font-size: 1.7rem;
 }
 
-.speech > p {
+.text-long > p {
   margin-bottom: 0;
 }
 
-.speech {
+.text-long {
   margin-bottom: 4rem;
 }
