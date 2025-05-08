@@ -52,6 +52,7 @@ a {
 .membership {
   display: block;
   text-decoration: none;
+  max-width: 500px;
 }
 
 .membership-content {
@@ -59,7 +60,6 @@ a {
   padding: 0 2rem;
   margin: 2rem 2rem 8rem 2rem;
   border-radius: 2px;
-  max-width: 500px;
   display: flex;
   justify-content: space-between;
   align-items: center;
