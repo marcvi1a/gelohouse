@@ -72,6 +72,12 @@ a {
   font-weight: 500;
 }
 
+@media screen and (max-width: 749px) {
+  .membership-content {
+    padding: 0 1rem;
+  }
+}
+
 .membership-content p:nth-of-type(1) {
   color: #000;
 }
@@ -88,7 +94,6 @@ a {
     radial-gradient(circle at 30% 80%, #5092ff 0%, transparent 50%),
     radial-gradient(circle at 60% 40%, #f9c23c 0%, transparent 50%);
 }
-
 
 .strikethrough {
   text-decoration: line-through;
