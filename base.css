@@ -51,6 +51,8 @@ a {
 
 .membership {
   text-decoration: none;
+  display: block;
+  max-width: 628px;
 }
 
 .membership-content {
