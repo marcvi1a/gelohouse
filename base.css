@@ -52,8 +52,8 @@ a {
 .membership {
   background-color: #666;
   border-radius: 2px;
-  margin: 2rem 2rem 8rem 2rem;
-  max-width: 500px;
+  margin: 2rem 2rem 10rem 2rem;
+  max-width: 550px;
 }
 
 .membership-content {
@@ -70,7 +70,7 @@ a {
 }
 
 .membership-content p:nth-of-type(2) {
-  background-color: black;
+  background-color: #000k;
   padding: 1rem;
   border-radius: 2px;
 }
