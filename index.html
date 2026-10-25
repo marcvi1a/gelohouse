@@ -46,6 +46,7 @@
   html { -webkit-text-size-adjust: 100%; }
   body {
     min-height: 100vh;
+    min-height: 100svh; /* phones: the height with the browser bars showing, so a page that fits never scrolls */
     display: flex;
     flex-direction: column;
     background: var(--wall);
@@ -124,9 +125,15 @@
     .wall { display: grid; grid-template-columns: repeat(3, var(--work)); max-width: none; --work: clamp(110px, 22vw, 170px); --space: clamp(28px, 6vw, 56px); --row: var(--space); }
   }
   @media (max-width: 600px) {
-    header { padding: 40px 16px 0; }
-    main { padding: 48px 16px 72px; }
-    .wall { grid-template-columns: repeat(2, var(--work)); --work: 38vw; --space: 9vw; row-gap: 40px; }
+    header { padding: 28px 16px 0; }
+    main { padding: 24px 16px; }
+    .wall { grid-template-columns: repeat(2, var(--work)); --work: 38vw; --space: 9vw; row-gap: 28px; }
+  }
+  /* Three rows of works must fit the visible height: 242px = header, paddings, labels and row gaps */
+  @supports (height: 100svh) {
+    @media (max-width: 600px) {
+      .wall { --work: min(38vw, calc((100svh - 242px) / 3)); }
+    }
   }
 </style>
 </head>
