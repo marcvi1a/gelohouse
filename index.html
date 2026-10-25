@@ -39,7 +39,7 @@
     --ink: #1b1917;
     --muted: #8d8c89;
     --work: clamp(120px, min(13vw, calc((100vh - 330px) / 2)), 230px); /* two rows must fit a laptop screen */
-    --space: clamp(36px, 6.5vw, 120px);
+    --space: clamp(36px, 9vw, 170px);
     --row: clamp(40px, 4.5vw, 72px);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -68,13 +68,13 @@
     text-decoration: none;
   }
 
-  /* The page is a wall: on desktop the works hang three over two, the lower pair centred, slightly above the middle with room around them */
+  /* The page is a wall: on desktop the works hang three over two, the lower pair centred, with equal room above and below and wide gaps between them */
   main {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 56px 24px 128px;
+    padding: 48px 24px;
   }
   .wall {
     display: flex;
