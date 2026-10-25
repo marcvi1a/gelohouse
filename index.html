@@ -11,7 +11,7 @@
 <meta property="og:description" content="Gelo Health, Kontrast and Run &amp; Chill.">
 <meta property="og:url" content="https://gelohouse.com/">
 <meta property="og:image" content="https://gelohouse.com/images/gelohouse.png">
-<link rel="icon" href="images/gelohouse.png">
+<link rel="icon" href="images/favicon.png">
 <link rel="apple-touch-icon" href="images/gelohouse.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,7 +55,7 @@
     letter-spacing: 0.005em;
   }
 
-  /* Instagram profile grid: 3px gaps, the founding year shows on hover like the like-count overlay */
+  /* Instagram profile grid: 3px gaps; on hover the founding year and name sit at the bottom, clear of the logo */
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -69,7 +69,7 @@
   .frame {
     position: relative;
     overflow: hidden;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 1 / 1;
   }
   .frame img {
     display: block;
@@ -81,8 +81,9 @@
     position: absolute;
     inset: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 24px;
     background: rgba(0, 0, 0, 0.6);
     color: #fff;
     font-size: 20px;
@@ -90,7 +91,7 @@
     opacity: 0;
     transition: opacity 0.15s;
   }
-  /* Touch screens have no hover, so the year sits under the image instead */
+  /* Touch screens have no hover, so year and name sit under the image instead */
   .year {
     display: none;
     padding: 10px 16px 14px;
@@ -107,16 +108,9 @@
   .tile:focus-visible { outline: 2px solid var(--ink); outline-offset: -2px; }
   .tile:focus-visible .overlay { opacity: 1; }
 
-  footer {
-    padding: 28px 32px 40px;
-    color: var(--muted);
-    font-size: 13px;
-  }
-
   @media (max-width: 640px) {
     header { padding: 20px 16px 22px; }
     .grid { grid-template-columns: 1fr; }
-    footer { padding: 22px 16px 32px; }
   }
 </style>
 </head>
@@ -127,21 +121,19 @@
 </header>
 
 <main class="grid">
-  <a class="tile" href="https://gelohealth.com.br/" target="_blank" rel="noopener">
-    <div class="frame"><img src="images/gelo-health.jpg" alt="Gelo Health" width="512" height="640"><span class="overlay">2023</span></div>
-    <div class="year">2023</div>
+  <a class="tile" href="https://www.instagram.com/runchill.club/" target="_blank" rel="noopener">
+    <div class="frame"><img src="images/run-chill.jpg?v=2" alt="Run &amp; Chill" width="512" height="512"><span class="overlay">2026 – Run &amp; Chill</span></div>
+    <div class="year">2026 – Run &amp; Chill</div>
   </a>
   <a class="tile" href="https://kontrast.com.br/" target="_blank" rel="noopener">
-    <div class="frame"><img src="images/kontrast.jpg" alt="Kontrast" width="512" height="640"><span class="overlay">2025</span></div>
-    <div class="year">2025</div>
+    <div class="frame"><img src="images/kontrast.jpg?v=2" alt="Kontrast" width="565" height="565"><span class="overlay">2025 – Kontrast</span></div>
+    <div class="year">2025 – Kontrast</div>
   </a>
-  <a class="tile" href="https://www.instagram.com/runchill.club/" target="_blank" rel="noopener">
-    <div class="frame"><img src="images/run-chill.jpg" alt="Run &amp; Chill" width="512" height="640"><span class="overlay">2026</span></div>
-    <div class="year">2026</div>
+  <a class="tile" href="https://gelohealth.com.br/" target="_blank" rel="noopener">
+    <div class="frame"><img src="images/gelo-health.jpg?v=2" alt="Gelo Health" width="512" height="512"><span class="overlay">2023 – Gelo Health</span></div>
+    <div class="year">2023 – Gelo Health</div>
   </a>
 </main>
-
-<footer>© 2026 Gelohouse</footer>
 
 </body>
 </html>
