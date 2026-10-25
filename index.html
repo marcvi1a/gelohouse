@@ -6,6 +6,7 @@
 <title>Gelohouse</title>
 <meta name="description" content="Gelohouse: Gelo Health, Kontrast and Run &amp; Chill.">
 <link rel="canonical" href="https://gelohouse.com/">
+<meta name="theme-color" content="#fbf7f0">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Gelohouse">
 <meta property="og:description" content="Gelo Health, Kontrast and Run &amp; Chill.">
@@ -15,7 +16,7 @@
 <link rel="apple-touch-icon" href="images/gelohouse.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Archivo:wght@600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400&family=Montserrat:wght@400&display=swap">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -31,11 +32,14 @@
 }
 </script>
 <style>
-  /* Fonts follow cdaa.com.br: Archivo for the name, Montserrat for text */
+  /* The name is set in Alegreya, the logo's typeface; all other text in Montserrat, as on cdaa.com.br.
+     Wall and ink colours are sequoiacap.com's. */
   :root {
-    --ink: #171a1c;
-    --muted: #7a7d80;
-    --paper: #fff;
+    --wall: #fbf7f0;
+    --ink: #1b1917;
+    --muted: #8d8c89;
+    --work: clamp(120px, 11vw, 190px);
+    --space: clamp(36px, 6.5vw, 120px);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { -webkit-text-size-adjust: 100%; }
@@ -43,7 +47,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background: var(--paper);
+    background: var(--wall);
     color: var(--ink);
     font: 400 13px/1.5 Montserrat, "Segoe UI", sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -53,48 +57,37 @@
     text-align: center;
   }
   .wordmark {
-    font-family: Archivo, sans-serif;
-    font-weight: 600;
-    font-size: 15px;
+    font-family: Alegreya, Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(26px, 2.4vw, 34px);
     line-height: 1;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
-    margin-right: -0.32em; /* tracking adds space after the last letter; this keeps the word optically centred */
   }
 
-  /* A quiet row of small squares with room around it; year and name show at the bottom on hover */
+  /* The page is a wall: the works hang on one line, slightly above the middle, with room between them and room for more */
   main {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 56px 56px 112px;
+    padding: 56px 24px 128px;
   }
-  .grid {
-    width: 100%;
-    max-width: 1200px;
+  .wall {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
+    grid-template-columns: repeat(5, var(--work));
+    gap: var(--space);
   }
-  .tile {
+  .work {
     display: block;
     color: inherit;
     text-decoration: none;
   }
   .building { cursor: default; }
+  /* A soft shadow lifts each work off the wall, without a frame */
   .frame {
     position: relative;
     overflow: hidden;
     aspect-ratio: 1 / 1;
-  }
-  /* Hairline so a white tile still reads as a square on the white page */
-  .frame::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.07);
-    pointer-events: none;
+    box-shadow: 0 1px 2px rgba(27, 25, 23, 0.06), 0 14px 28px -14px rgba(27, 25, 23, 0.28);
   }
   .frame img {
     display: block;
@@ -108,7 +101,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    padding: 14px 16px;
+    padding: 12px 14px;
     background: rgba(0, 0, 0, 0.45);
     color: #fff;
     font-size: 12px;
@@ -116,31 +109,31 @@
     opacity: 0;
     transition: opacity 0.3s ease;
   }
-  /* Touch screens have no hover, so year and name sit under the image instead */
-  .year {
+  /* Touch screens have no hover, so year and name sit under the work instead */
+  .label {
     display: none;
-    padding: 8px 2px 0;
+    padding: 10px 1px 0;
     color: var(--muted);
     font-size: 12px;
     letter-spacing: 0.04em;
   }
   @media (hover: hover) {
-    .tile:hover .overlay { opacity: 1; }
+    .work:hover .overlay { opacity: 1; }
   }
   @media (hover: none) {
     .overlay { display: none; }
-    .year { display: block; }
+    .label { display: block; }
   }
-  .tile:focus-visible { outline: 1px solid var(--ink); outline-offset: 3px; }
-  .tile:focus-visible .overlay { opacity: 1; }
+  .work:focus-visible { outline: 1px solid var(--ink); outline-offset: 4px; }
+  .work:focus-visible .overlay { opacity: 1; }
 
-  @media (max-width: 1000px) {
-    .grid { grid-template-columns: repeat(3, 1fr); max-width: 720px; }
+  @media (max-width: 900px) {
+    .wall { grid-template-columns: repeat(3, var(--work)); --work: clamp(110px, 22vw, 170px); --space: clamp(28px, 6vw, 56px); }
   }
-  @media (max-width: 640px) {
+  @media (max-width: 600px) {
     header { padding: 40px 16px 0; }
-    main { padding: 40px 16px 64px; }
-    .grid { grid-template-columns: repeat(2, 1fr); gap: 10px 8px; }
+    main { padding: 48px 16px 72px; }
+    .wall { grid-template-columns: repeat(2, var(--work)); --work: 38vw; --space: 9vw; row-gap: 40px; }
   }
 </style>
 </head>
@@ -151,26 +144,26 @@
 </header>
 
 <main>
-  <div class="grid">
-    <div class="tile building">
-      <div class="frame"><img src="images/building-b.jpg" alt="" width="512" height="512"><span class="overlay">2026 – Building</span></div>
-      <div class="year">2026 – Building</div>
+  <div class="wall">
+    <div class="work building">
+      <div class="frame"><img src="images/building-b.jpg" alt="" width="512" height="512"><span class="overlay">2027 – Building</span></div>
+      <div class="label">2027 – Building</div>
     </div>
-    <div class="tile building">
+    <div class="work building">
       <div class="frame"><img src="images/building-a.jpg" alt="" width="512" height="512"><span class="overlay">2026 – Building</span></div>
-      <div class="year">2026 – Building</div>
+      <div class="label">2026 – Building</div>
     </div>
-    <a class="tile" href="https://www.instagram.com/runchill.club/" target="_blank" rel="noopener">
+    <a class="work" href="https://www.instagram.com/runchill.club/" target="_blank" rel="noopener">
       <div class="frame"><img src="images/run-chill.jpg?v=2" alt="Run &amp; Chill" width="512" height="512"><span class="overlay">2026 – Run &amp; Chill</span></div>
-      <div class="year">2026 – Run &amp; Chill</div>
+      <div class="label">2026 – Run &amp; Chill</div>
     </a>
-    <a class="tile" href="https://kontrast.com.br/" target="_blank" rel="noopener">
+    <a class="work" href="https://kontrast.com.br/" target="_blank" rel="noopener">
       <div class="frame"><img src="images/kontrast.jpg?v=2" alt="Kontrast" width="565" height="565"><span class="overlay">2025 – Kontrast</span></div>
-      <div class="year">2025 – Kontrast</div>
+      <div class="label">2025 – Kontrast</div>
     </a>
-    <a class="tile" href="https://gelohealth.com.br/" target="_blank" rel="noopener">
+    <a class="work" href="https://gelohealth.com.br/" target="_blank" rel="noopener">
       <div class="frame"><img src="images/gelo-health.jpg?v=2" alt="Gelo Health" width="512" height="512"><span class="overlay">2023 – Gelo Health</span></div>
-      <div class="year">2023 – Gelo Health</div>
+      <div class="label">2023 – Gelo Health</div>
     </a>
   </div>
 </main>
