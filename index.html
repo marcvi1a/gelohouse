@@ -126,13 +126,13 @@
   }
   @media (max-width: 600px) {
     header { padding: 28px 16px 0; }
-    main { padding: 24px 16px; }
-    .wall { grid-template-columns: repeat(2, var(--work)); --work: 38vw; --space: 9vw; row-gap: 28px; }
+    main { padding: 24px 16px 16px; align-items: stretch; }
+    .wall { grid-template-columns: repeat(2, var(--work)); --work: 38vw; --space: 9vw; row-gap: 28px; align-content: space-between; } /* last row as low as possible */
   }
-  /* Three rows of works must fit the visible height: 242px = header, paddings, labels and row gaps */
+  /* Three rows of works must fit the visible height: 234px = header, paddings, labels and row gaps */
   @supports (height: 100svh) {
     @media (max-width: 600px) {
-      .wall { --work: min(38vw, calc((100svh - 242px) / 3)); }
+      .wall { --work: min(38vw, calc((100svh - 234px) / 3)); }
     }
   }
 </style>
