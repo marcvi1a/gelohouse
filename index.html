@@ -26,7 +26,7 @@
   "brand": [
     { "@type": "Brand", "name": "Gelo Health", "url": "https://gelohealth.com.br/" },
     { "@type": "Brand", "name": "Kontrast", "url": "https://kontrast.com.br/" },
-    { "@type": "Brand", "name": "Run & Chill", "url": "https://runchill.com.br/" }
+    { "@type": "Brand", "name": "Run & Chill", "url": "https://www.instagram.com/runchill.club/" }
   ]
 }
 </script>
@@ -34,7 +34,6 @@
   :root {
     --ink: #111;
     --muted: #767676;
-    --line: #e4e4e4;
     --paper: #fff;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -56,22 +55,19 @@
     letter-spacing: 0.005em;
   }
 
-  /* Portfolio grid: hairlines come from the grid background showing through 1px gaps */
+  /* Instagram profile grid: 3px gaps, the founding year shows on hover like the like-count overlay */
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--line);
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
+    gap: 3px;
   }
   .tile {
     display: block;
-    background: var(--paper);
     color: inherit;
     text-decoration: none;
   }
   .frame {
+    position: relative;
     overflow: hidden;
     aspect-ratio: 4 / 5;
   }
@@ -80,33 +76,36 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
   }
-  .caption {
+  .overlay {
+    position: absolute;
+    inset: 0;
     display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 16px;
-    padding: 14px 16px 16px;
-    border-top: 1px solid var(--line);
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    opacity: 0;
+    transition: opacity 0.15s;
   }
-  .name { font-weight: 600; }
-  .role { color: var(--muted); }
-  .site {
+  /* Touch screens have no hover, so the year sits under the image instead */
+  .year {
+    display: none;
+    padding: 10px 16px 14px;
     color: var(--muted);
-    white-space: nowrap;
-    transition: color 0.2s;
-  }
-  .arrow {
-    display: inline-block;
-    transition: transform 0.2s;
+    font-size: 13px;
   }
   @media (hover: hover) {
-    .tile:hover .frame img { transform: scale(1.03); }
-    .tile:hover .site { color: var(--ink); }
-    .tile:hover .arrow { transform: translate(2px, -2px); }
+    .tile:hover .overlay { opacity: 1; }
+  }
+  @media (hover: none) {
+    .overlay { display: none; }
+    .year { display: block; }
   }
   .tile:focus-visible { outline: 2px solid var(--ink); outline-offset: -2px; }
+  .tile:focus-visible .overlay { opacity: 1; }
 
   footer {
     padding: 28px 32px 40px;
@@ -117,7 +116,6 @@
   @media (max-width: 640px) {
     header { padding: 20px 16px 22px; }
     .grid { grid-template-columns: 1fr; }
-    .caption { padding: 12px 16px 14px; }
     footer { padding: 22px 16px 32px; }
   }
 </style>
@@ -130,25 +128,16 @@
 
 <main class="grid">
   <a class="tile" href="https://gelohealth.com.br/" target="_blank" rel="noopener">
-    <div class="frame"><img src="images/gelo-health.jpg" alt="Gelo Health" width="512" height="640"></div>
-    <div class="caption">
-      <span><span class="name">Gelo Health</span> <span class="role">Ice baths</span></span>
-      <span class="site">gelohealth.com.br <span class="arrow">↗</span></span>
-    </div>
+    <div class="frame"><img src="images/gelo-health.jpg" alt="Gelo Health" width="512" height="640"><span class="overlay">2023</span></div>
+    <div class="year">2023</div>
   </a>
   <a class="tile" href="https://kontrast.com.br/" target="_blank" rel="noopener">
-    <div class="frame"><img src="images/kontrast.jpg" alt="Kontrast" width="512" height="640"></div>
-    <div class="caption">
-      <span><span class="name">Kontrast</span> <span class="role">Contrast therapy spaces</span></span>
-      <span class="site">kontrast.com.br <span class="arrow">↗</span></span>
-    </div>
+    <div class="frame"><img src="images/kontrast.jpg" alt="Kontrast" width="512" height="640"><span class="overlay">2025</span></div>
+    <div class="year">2025</div>
   </a>
-  <a class="tile" href="https://runchill.com.br/" target="_blank" rel="noopener">
-    <div class="frame"><img src="images/run-chill.jpg" alt="Run &amp; Chill" width="512" height="640"></div>
-    <div class="caption">
-      <span><span class="name">Run &amp; Chill</span> <span class="role">Social running events</span></span>
-      <span class="site">runchill.com.br <span class="arrow">↗</span></span>
-    </div>
+  <a class="tile" href="https://www.instagram.com/runchill.club/" target="_blank" rel="noopener">
+    <div class="frame"><img src="images/run-chill.jpg" alt="Run &amp; Chill" width="512" height="640"><span class="overlay">2026</span></div>
+    <div class="year">2026</div>
   </a>
 </main>
 
