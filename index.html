@@ -92,6 +92,7 @@
     overflow: hidden;
     aspect-ratio: 1 / 1;
     box-shadow: 0 1px 2px rgba(27, 25, 23, 0.06), 0 14px 28px -14px rgba(27, 25, 23, 0.28);
+    transition: box-shadow 0.35s ease;
   }
   .frame img {
     display: block;
@@ -99,37 +100,21 @@
     height: 100%;
     object-fit: cover;
   }
-  .overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    padding: 12px 14px;
-    background: rgba(0, 0, 0, 0.45);
-    color: #fff;
-    font-size: 12px;
-    letter-spacing: 0.04em;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  /* Touch screens have no hover, so year and name sit under the work instead */
+  /* Year and name hang under the work, like a gallery label */
   .label {
-    display: none;
     padding: 10px 1px 0;
     color: var(--muted);
     font-size: 12px;
     letter-spacing: 0.04em;
+    transition: color 0.35s ease;
   }
+  /* Linked works lift off the wall on hover and their label darkens; Building works stay still */
   @media (hover: hover) {
-    .work:hover .overlay { opacity: 1; }
-  }
-  @media (hover: none) {
-    .overlay { display: none; }
-    .label { display: block; }
+    a.work:hover .frame { box-shadow: 0 2px 4px rgba(27, 25, 23, 0.08), 0 22px 40px -16px rgba(27, 25, 23, 0.4); }
+    a.work:hover .label { color: var(--ink); }
   }
   .work:focus-visible { outline: 1px solid var(--ink); outline-offset: 4px; }
-  .work:focus-visible .overlay { opacity: 1; }
+  .work:focus-visible .label { color: var(--ink); }
 
   @media (max-width: 900px) {
     .wall { grid-template-columns: repeat(3, var(--work)); --work: clamp(110px, 22vw, 170px); --space: clamp(28px, 6vw, 56px); }
@@ -150,23 +135,23 @@
 <main>
   <div class="wall">
     <div class="work building">
-      <div class="frame"><img src="images/building-b.jpg" alt="" width="512" height="512"><span class="overlay">2027 – Building</span></div>
+      <div class="frame"><img src="images/building-b.jpg" alt="" width="512" height="512"></div>
       <div class="label">2027 – Building</div>
     </div>
     <div class="work building">
-      <div class="frame"><img src="images/building-a.jpg" alt="" width="512" height="512"><span class="overlay">2026 – Building</span></div>
+      <div class="frame"><img src="images/building-a.jpg" alt="" width="512" height="512"></div>
       <div class="label">2026 – Building</div>
     </div>
     <a class="work" href="https://www.instagram.com/runchill.club/" target="_blank" rel="noopener">
-      <div class="frame"><img src="images/run-chill.jpg?v=2" alt="Run &amp; Chill" width="512" height="512"><span class="overlay">2026 – Run &amp; Chill</span></div>
+      <div class="frame"><img src="images/run-chill.jpg?v=2" alt="Run &amp; Chill" width="512" height="512"></div>
       <div class="label">2026 – Run &amp; Chill</div>
     </a>
     <a class="work" href="https://kontrast.com.br/" target="_blank" rel="noopener">
-      <div class="frame"><img src="images/kontrast.jpg?v=2" alt="Kontrast" width="565" height="565"><span class="overlay">2025 – Kontrast</span></div>
+      <div class="frame"><img src="images/kontrast.jpg?v=2" alt="Kontrast" width="565" height="565"></div>
       <div class="label">2025 – Kontrast</div>
     </a>
     <a class="work" href="https://gelohealth.com.br/" target="_blank" rel="noopener">
-      <div class="frame"><img src="images/gelo-health.jpg?v=2" alt="Gelo Health" width="512" height="512"><span class="overlay">2023 – Gelo Health</span></div>
+      <div class="frame"><img src="images/gelo-health.jpg?v=2" alt="Gelo Health" width="512" height="512"></div>
       <div class="label">2023 – Gelo Health</div>
     </a>
   </div>
