@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gelohouse</title>
+<meta name="description" content="Gelohouse: Gelo Health, Kontrast and Run &amp; Chill.">
+<link rel="canonical" href="https://marcvi1a.github.io/gelohouse/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gelohouse">
+<meta property="og:description" content="Gelo Health, Kontrast and Run &amp; Chill.">
+<meta property="og:url" content="https://marcvi1a.github.io/gelohouse/">
+<meta property="og:image" content="https://marcvi1a.github.io/gelohouse/images/gelohouse.png">
+<link rel="icon" href="images/gelohouse.png">
+<link rel="apple-touch-icon" href="images/gelohouse.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Gelohouse",
+  "url": "https://marcvi1a.github.io/gelohouse/",
+  "logo": "https://marcvi1a.github.io/gelohouse/images/gelohouse.png",
+  "brand": [
+    { "@type": "Brand", "name": "Gelo Health", "url": "https://gelohealth.com.br/" },
+    { "@type": "Brand", "name": "Kontrast", "url": "https://kontrast.com.br/" },
+    { "@type": "Brand", "name": "Run & Chill", "url": "https://runchill.com.br/" }
+  ]
+}
+</script>
+<style>
+  :root {
+    --ink: #111;
+    --muted: #767676;
+    --line: #e4e4e4;
+    --paper: #fff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font: 15px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  header {
+    padding: 28px 32px 32px;
+  }
+  .wordmark {
+    font-family: Alegreya, Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(30px, 3.2vw, 46px);
+    line-height: 1;
+    letter-spacing: 0.005em;
+  }
+
+  /* Portfolio grid: hairlines come from the grid background showing through 1px gaps */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .tile {
+    display: block;
+    background: var(--paper);
+    color: inherit;
+    text-decoration: none;
+  }
+  .frame {
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+  }
+  .frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .caption {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 16px 16px;
+    border-top: 1px solid var(--line);
+  }
+  .name { font-weight: 600; }
+  .role { color: var(--muted); }
+  .site {
+    color: var(--muted);
+    white-space: nowrap;
+    transition: color 0.2s;
+  }
+  .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+  }
+  @media (hover: hover) {
+    .tile:hover .frame img { transform: scale(1.03); }
+    .tile:hover .site { color: var(--ink); }
+    .tile:hover .arrow { transform: translate(2px, -2px); }
+  }
+  .tile:focus-visible { outline: 2px solid var(--ink); outline-offset: -2px; }
+
+  footer {
+    padding: 28px 32px 40px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  @media (max-width: 640px) {
+    header { padding: 20px 16px 22px; }
+    .grid { grid-template-columns: 1fr; }
+    .caption { padding: 12px 16px 14px; }
+    footer { padding: 22px 16px 32px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1 class="wordmark">Gelohouse</h1>
+</header>
+
+<main class="grid">
+  <a class="tile" href="https://gelohealth.com.br/" target="_blank" rel="noopener">
+    <div class="frame"><img src="images/gelo-health.jpg" alt="Gelo Health" width="512" height="640"></div>
+    <div class="caption">
+      <span><span class="name">Gelo Health</span> <span class="role">Ice baths</span></span>
+      <span class="site">gelohealth.com.br <span class="arrow">↗</span></span>
+    </div>
+  </a>
+  <a class="tile" href="https://kontrast.com.br/" target="_blank" rel="noopener">
+    <div class="frame"><img src="images/kontrast.jpg" alt="Kontrast" width="512" height="640"></div>
+    <div class="caption">
+      <span><span class="name">Kontrast</span> <span class="role">Contrast therapy spaces</span></span>
+      <span class="site">kontrast.com.br <span class="arrow">↗</span></span>
+    </div>
+  </a>
+  <a class="tile" href="https://runchill.com.br/" target="_blank" rel="noopener">
+    <div class="frame"><img src="images/run-chill.jpg" alt="Run &amp; Chill" width="512" height="640"></div>
+    <div class="caption">
+      <span><span class="name">Run &amp; Chill</span> <span class="role">Social running events</span></span>
+      <span class="site">runchill.com.br <span class="arrow">↗</span></span>
+    </div>
+  </a>
+</main>
+
+<footer>© 2026 Gelohouse</footer>
+
+</body>
+</html>
